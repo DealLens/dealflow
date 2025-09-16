@@ -1,7 +1,13 @@
-# dealflow
+# 💼 Dealflow
 
-# 실행
+LangChain + Azure OpenAI 기반 프로젝트
+
+---
+
+## ⚙️ 초기 환경 설정
+
+### 1. 가상환경 생성 및 활성화
+```bash
 python -m venv venv
-.\venv\Scripts\activate
-pip install -r requirements.txt
-cp .env.example .env
+.\venv\Scripts\activate      # Windows
+# source venv/bin/activate   # macOS / Linux
