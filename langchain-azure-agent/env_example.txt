@@ -1,0 +1,14 @@
+# Azure OpenAI 설정
+AOAI_ENDPOINT=https://your-resource-name.openai.azure.com/
+AOAI_API_KEY=your-api-key-here
+AOAI_DEPLOY_GPT4O=your-gpt-4o-deployment-name
+AOAI_DEPLOY_GPT4O_MINI=your-gpt-4o-mini-deployment-name
+
+# LangSmith 설정 (선택사항 - 모니터링용)
+LANGCHAIN_TRACING_V2=true
+LANGCHAIN_API_KEY=your-langsmith-api-key
+LANGCHAIN_PROJECT=dealflow-agent
+
+# Streamlit 설정
+STREAMLIT_SERVER_PORT=8501
+STREAMLIT_SERVER_ADDRESS=0.0.0.0
