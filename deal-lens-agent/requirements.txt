@@ -1,0 +1,29 @@
+# Core dependencies
+streamlit==1.49.1
+python-dotenv==1.1.1
+
+# LangChain dependencies
+langchain==0.3.27
+langchain-openai==0.3.33
+langchain-core==0.3.76
+langchain-community==0.3.29
+
+# Azure OpenAI
+openai==1.107.1
+
+# Vector store
+faiss-cpu==1.8.0
+
+# Data processing
+pandas==2.3.2
+numpy==2.3.3
+
+# File processing
+PyPDF2==3.0.1
+python-docx==1.1.0
+
+# Optional: LangSmith for monitoring
+langsmith==0.4.27
+
+# Optional: Additional tools
+requests==2.32.5

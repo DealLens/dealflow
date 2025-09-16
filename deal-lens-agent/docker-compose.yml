@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  deal-lens-agent:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - AOAI_ENDPOINT=${AOAI_ENDPOINT}
+      - AOAI_API_KEY=${AOAI_API_KEY}
+      - AOAI_DEPLOY_GPT4O=${AOAI_DEPLOY_GPT4O}
+      - AOAI_DEPLOY_EMBEDDINGS=${AOAI_DEPLOY_EMBEDDINGS}
+      - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2:-false}
+      - LANGCHAIN_API_KEY=${LANGCHAIN_API_KEY}
+      - LANGCHAIN_PROJECT=${LANGCHAIN_PROJECT:-deal-lens-agent}
+    volumes:
+      - ./.env:/app/.env:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
